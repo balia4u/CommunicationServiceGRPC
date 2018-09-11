@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.helloworld";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package communication_service;
+
+service Communication {
+  // Sends a message
+  rpc CommunicationRequestHandler (CommunicationRequest) returns (CommunicationResponse) {}
+}
+
+message CommunicationRequest {
+  string bbsign=1;
+  string data_map = 2;
+  string communication_type=3;
+  string channel=4;
+  oneof optional_request_type {
+     string request_type = 5;
+  }
+}
+
+
+message CommunicationResponse {
+  string response_json = 1;
+}
+
