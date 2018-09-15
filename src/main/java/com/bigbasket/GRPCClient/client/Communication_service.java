@@ -107,7 +107,8 @@ public class Communication_service {
 	}
 
 	public static void main(String[] args) {
-		Communication_service cs = new Communication_service("communication-qas.bigbasket.com", 6667);
+		//Communication_service cs = new Communication_service("communication-qas.bigbasket.com", 6667);
+		Communication_service cs = new Communication_service("aedd54186b7f111e8a122129d77c7ac6-1636873293.us-east-1.elb.amazonaws.com", 6667);
 		cs.CommunicationCall();
 		System.out.println(cs.response);
 		String res = "" + cs.response;
